@@ -1,0 +1,12 @@
+<div class="container">
+    <h2 class="title-lg mb">New Question</h2>
+    <%= form_with model: @question do |f| %>
+        <p><%= f.label :body, 'Write your question' %></p>
+        <p><%= f.text_area :body, rows: 5, class: 'form-text-area' %></p>
+
+        <p class="mt"><%= f.label :user_id, 'User ID' %></p>
+        <p><%= f.text_field :user_id, class: 'form-text-field' %></p>
+
+        <p class="mt"><%= f.submit 'Create', class: 'button button-main' %></p>
+    <% end %>
+</div>
