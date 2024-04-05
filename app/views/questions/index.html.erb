@@ -1,14 +1,18 @@
 <div class="container">
-    <h2 class="title-lg mb">All questions</h2>
-    <% @questions.each do |q| %>
-        <p class="mb-sm"><%= link_to "Вопрос #{q.id}", question_path(id: q.id) %></p>
-    <% end %>
-
     <p class="mt">
         <%= link_to "New question", new_question_path, class: 'button button-main' %>
     </p>
-
     <p class="mt">
         <%= render 'form', question: @question %>
     </p>
 </div>
+
+<div class="container mt-sm">
+    <h2 class="title-lg">All questions</h2>
+</div> 
+
+<% @questions.each do |question| %>
+    <div class="mt-sm container">
+        <%= render question %>
+    </div>
+<% end %>

@@ -13,8 +13,7 @@ class QuestionsController < ApplicationController
 
   def create
     @question = Question.create(question_params)
-
-    redirect_to question_path(@question)
+    redirect_to question_path(@question), notice: 'Question was successfully created.'
   end
 
   def show; end
@@ -28,7 +27,7 @@ class QuestionsController < ApplicationController
 
   def destroy
     @question.destroy
-    redirect_to questions_path
+    redirect_to questions_path, notice: 'Question was successfully destroyed.'
   end
 
   private

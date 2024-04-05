@@ -1,0 +1,17 @@
+.message {
+    border: 1px solid #d0d0d0;
+    padding: 10px 15px;
+    opacity: 1;
+    transition: opacity 3s ease-out;
+    /* плавное изменение opacity в течение 3 секунд */
+}
+
+.message-notice {
+    background-color: #FFD60A;
+    border-color: #E0BB00;
+}
+
+.message-alert {
+    background-color: #FF3800;
+    border-color: #E00000;
+}

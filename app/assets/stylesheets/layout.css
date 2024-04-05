@@ -8,6 +8,7 @@ body {
     max-width: 800px;
     margin: 40px;
     width: 100%;
+    overflow-wrap: break-word;
 }
 
 .container {
