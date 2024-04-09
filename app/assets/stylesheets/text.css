@@ -5,7 +5,7 @@ body {
 
 a,
 button {
-    color: #FF3800
+    color: #D80032;
 }
 
 .title-lg {
@@ -26,4 +26,8 @@ button {
 
 .text-gray {
     color: #a0a0a0
+}
+
+.text-bold {
+    font-weight: bold;
 }
