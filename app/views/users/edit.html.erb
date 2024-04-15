@@ -1,5 +1,5 @@
 <div class="container">
-    <h2 class="title">Sign up and ask</h2>
+    <h2 class="title"> Edit</h2>
 
     <% if @user.errors.any? %>
         <div class="mt">
@@ -17,8 +17,7 @@
             <p class="mt"><%= form.label :nickname, "Nickname" %></p>
             <p><%= form.text_field :nickname, class: "form-text-field" %></p>
 
-            <p class="mt"><%= form.label :email, "E-mail" %></p>
-            <p><%= form.text_field :email, class: "form-text-field" %></p>
+            <p class="mt-lg text-sm">If you do not want to change your password, leave this field blank</p>
 
             <p class="mt"><%= form.label :password, "Password" %></p>
             <p><%= form.password_field :password, class: "form-text-field" %></p>
@@ -26,7 +25,15 @@
             <p class="mt"><%= form.label :password_confirmation, "Password confirmation" %></p>
             <p><%= form.password_field :password_confirmation, class: "form-text-field" %></p>
 
-            <p class="mt-lg"><%= form.submit "Registrate", class: "button button-main" %></p>
+            <p class="mt-lg"><%= form.submit "Confirm edit", class: "button button-main" %></p>
+            <span class="text-sm">or <%= link_to "Return", :back %></span>
         <% end %>
+    </div>
+
+    <div class="mt-lg">
+        <%= button_to "Delete profile", user_path(@user), 
+            method: :delete, 
+            form: {data: {turbo_confirm: "Delete profile?"}},
+            class: "text-red text-sm" %>
     </div>
 </div>
